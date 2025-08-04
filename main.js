@@ -40,10 +40,18 @@
 			this.clear = document.getElementById("clear");
 
 			// Event listener for encode button: applies encode function to input
-			this.encode.onclick = () => this.output.value = encode(this.input.value);
+			this.encode.onclick = () => {
+				this.output.value = encode(this.input.value);
+				this.output.scrollIntoView({behavior: "smooth"});
+				this.output.focus();
+			}
 
 			// Event listener for decode button: applies decode function to input
-			this.decode.onclick = () => this.output.value = decode(this.input.value);
+			this.decode.onclick = () => {
+				this.output.value = decode(this.input.value);
+				this.output.scrollIntoView({behavior: "smooth"});
+				this.output.focus();
+			}
 
 			// Event listener for copy button: copies output to clipboard
 			this.copy.onclick = () => navigator.clipboard.writeText(this.output.value);
