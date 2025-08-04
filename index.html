@@ -3,39 +3,69 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Simple JavaScript Encode</title>
+		<title>JavaScript Code Transformer</title>
 		<link rel="icon" href="icon.png" />
+		<link rel="stylesheet" href="font/css2.css" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<div class="container">
-			<div class="title">
-				<span>Simple JavaScript Encode</span>
-			</div>
-			<div class="box">
-				<div class="area">
-					<div class="area-title">JavaScript Code</div>
-					<textarea id="input" placeholder="alert(123);" autocapitalize="none">alert("Hello, World!");</textarea>
-					<div class="button">
-						<div id="encode">Encode</div>
-						<div id="decode">Decode</div>
+			<header class="header">
+				<h1>JavaScript Code Transformer</h1>
+				<p class="subtitle">Encode and decode JavaScript code with ease</p>
+			</header>
+			
+			<main class="main-content">
+				<section class="code-section">
+					<div class="code-area">
+						<div class="code-header">
+							<h2>JavaScript Code</h2>
+							<button id="clear" class="icon-button" title="Clear">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+								</svg>
+							</button>
+						</div>
+						<textarea id="input" placeholder="Enter your JavaScript code here (e.g. alert('Hello!');)" autocapitalize="none" spellcheck="false">alert("Hello, World!");</textarea>
 					</div>
-					<div class="button">
-						<div id="clear">Clear</div>
+					
+					<div class="action-buttons">
+						<button id="encode" class="primary-button">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 3v18M7 8l5-5 5 5M17 16l-5 5-5-5"></path>
+							</svg>
+							Encode
+						</button>
+						<button id="decode" class="secondary-button">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 3v18M17 8l-5-5-5 5M7 16l5 5 5-5"></path>
+							</svg>
+							Decode
+						</button>
 					</div>
-				</div>
-				<div class="area">
-					<div class="area-title">Output</div>
-					<textarea id="output" placeholder="Output in here ..." readonly></textarea>
-				</div>
-				<div class="button">
-					<div id="copy">Copy To Clipboard</div>
-				</div>
-			</div>
+					
+					<div class="code-area">
+						<div class="code-header">
+							<h2>Output</h2>
+						</div>
+						<textarea id="output" placeholder="Your transformed code will appear here..." readonly spellcheck="false"></textarea>
+					</div>
+					
+					<button id="copy" class="copy-button">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+						</svg>
+						Copy to Clipboard
+					</button>
+				</section>
+			</main>
+			
+			<footer class="footer">
+				<p>Copyright &copy; 2025 Liza Fisza. All rights reserved.</p>
+			</footer>
 		</div>
-		<div class="footer">
-			<span>Copyright &copy; 2025. Liza Fisza</span>
-		</div>
+		
 		<script src="dist/base.js"></script>
 		<script defer src="main.js"></script>
 	</body>
